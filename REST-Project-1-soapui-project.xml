@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3524922a-194b-48cc-a093-1485eb94bab9" activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="5.6.0" encryptionMode="Not encrypted" updated="3.9.1 2021-07-21T11:56:24Z" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="e2c2f54d-234a-47f7-b979-681c84176511" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.eu" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings>
+      <con:setting id="CreateWadlDocumentationAction@report-directory">C:\Users\sunil\Downloads</con:setting>
+    </con:settings>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+      <con:endpoint>https://restcountries.eu</con:endpoint>
+    </con:endpoints>
+    <con:resource name="India" path="/rest/v2/name/india" id="067c1fb0-4a50-4eac-8520-9662eea6f83b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="India 1" id="7f79bedc-f078-483b-92b7-0e81cb7974a7" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:ind="https://restcountries.eu/rest/v2/name/india">ind:Fault</con:element></con:representation>
+      <con:request name="All_Countries" id="0433c0b0-b7bc-4a81-8bc3-739fddc6e98e" mediaType="application/json"><con:settings/><con:endpoint>https://restcountries.eu</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="5795cf6b-fbff-46c5-82c2-0cf851426535" name="CountriesTestSuite">
+    <con:description>TestSuite generated for REST Service [https://restcountries.eu]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="dee1a507-66d4-40ba-af11-249d270b70a3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="India TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [India] located at [/rest/v2/name/india]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="355233e1-a774-4e6b-b217-e39f0ad9fe06">
+        <con:settings/>
+        <con:config service="https://restcountries.eu" resourcePath="/rest/v2/name/india" methodName="India 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="8e6c0ba7-4b4a-44a7-a1db-9fa25e194cbc" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://restcountries.eu</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://restcountries.eu/rest/v2/name/india</con:originalUri>
+            <con:assertion type="Simple Contains" id="ba8f6e43-9abf-4efe-b9a8-e9e18fa1dc49" name="Contains">
+              <con:configuration>
+                <token>British Indian Ocean</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

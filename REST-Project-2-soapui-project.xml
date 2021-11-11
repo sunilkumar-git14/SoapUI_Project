@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4e79ef47-e702-4b80-a7db-0d60e2136d04" activeEnvironment="Default" name="REST Project 2" resourceRoot="" soapui-version="5.6.0" encryptionMode="Not encrypted" updated="3.9.1 2021-07-21T11:56:24Z" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="41a4451f-1662-49e2-bdaf-dccc84c29e72" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://reqres.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+      <con:endpoint>https://reqres.in</con:endpoint>
+    </con:endpoints>
+    <con:resource name="2" path="/api/users/2" id="3dfee45c-429a-4de6-8353-9ef096ba8e4b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="2 1" id="a10da716-3cf0-4682-a82d-489962649590" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="https://reqres.in/api/users/2">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="3d2f5103-8f30-4a97-aa32-687b4177db57" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="4388032f-1446-4221-9d68-a77c8638b13f" name="https://reqres.in TestSuite">
+    <con:description>TestSuite generated for REST Service [https://reqres.in]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="4b663495-7e83-4785-b9dd-bd96e835f96e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="2 TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [2] located at [/api/users/2]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="249be462-9f67-435f-8461-20c8e2d3844c">
+        <con:settings/>
+        <con:config service="https://reqres.in" resourcePath="/api/users/2" methodName="2 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="3d2f5103-8f30-4a97-aa32-687b4177db57" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+            <con:assertion type="GroovyScriptAssertion" id="ab4165cc-8891-4110-bd4a-c28485010043" name="Script Assertion">
+              <con:configuration>
+                <scriptText>import groovy.json.JsonSlurper
+
+def jsonresponse=messageExchange.response.responseContent
+
+def parsejson=new JsonSlurper().parseText(jsonresponse)
+
+def act_first_name=parsejson.data.first_name
+def act_last_name=parsejson.data.last_name
+
+def exp_first_name=context.getTestCase().getPropertyValue("first_name")
+def exp_last_name=context.getTestCase().getPropertyValue("last_name")
+
+assert act_first_name==exp_first_name
+assert act_last_name==exp_last_name</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="11e8560e-0394-4e3a-96cc-b80483f305a0" name="JsonPath Count">
+              <con:configuration>
+                <path>data.email</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="c88fc227-3e2e-4d28-bac7-57e3a150c258" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>data.email</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="b281073d-8653-4556-97d1-fa00e42f75a5" name="JsonPath Match">
+              <con:configuration><path>data.first_name</path><content>Janet</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="88fc68e9-e658-4447-97ea-ea68ed31be09" name="JsonPath RegEx Match">
+              <con:configuration>
+                <path>data.id</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[a-z]*</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="3b243df9-7f89-424b-a982-7b5bf34ed106" name="JsonPath RegEx Match 1">
+              <con:configuration>
+                <path>data.id</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[0-9]*</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="68f3025b-2ecc-46c9-b5c2-be306ba87bf2" name="JsonPath RegEx Match 2">
+              <con:configuration>
+                <path>data.first_name</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>[a-zA-Z]*</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>first_name</con:name>
+          <con:value>Janet</con:value>
+        </con:property>
+        <con:property>
+          <con:name>last_name</con:name>
+          <con:value>Weaver</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:authRepository/>
+  <con:tags/>
+<con:sensitiveInformation/></con:soapui-project>
