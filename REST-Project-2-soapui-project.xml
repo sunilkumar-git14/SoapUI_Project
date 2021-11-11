@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="4e79ef47-e702-4b80-a7db-0d60e2136d04" activeEnvironment="Default" name="REST Project 2" resourceRoot="" soapui-version="5.6.0" encryptionMode="Not encrypted" updated="3.9.1 2021-07-21T11:56:24Z" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="4e79ef47-e702-4b80-a7db-0d60e2136d04" activeEnvironment="Default environment" name="REST Project 2" resourceRoot="" soapui-version="5.6.0" encryptionMode="Not encrypted" updated="3.10.1 2021-10-13T15:50:30Z" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:RestService" id="41a4451f-1662-49e2-bdaf-dccc84c29e72" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://reqres.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    
-    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
       <con:endpoint>https://reqres.in</con:endpoint>
     </con:endpoints>
     <con:resource name="2" path="/api/users/2" id="3dfee45c-429a-4de6-8353-9ef096ba8e4b">
@@ -91,7 +91,13 @@ assert act_last_name==exp_last_name</scriptText>
               </con:configuration>
             </con:assertion>
             <con:assertion type="JsonPath Match" id="b281073d-8653-4556-97d1-fa00e42f75a5" name="JsonPath Match">
-              <con:configuration><path>data.first_name</path><content>Janet</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration>
+              <con:configuration>
+                <path>data.first_name</path>
+                <content>Janet</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
             </con:assertion>
             <con:assertion type="JsonPath RegEx Match" id="88fc68e9-e658-4447-97ea-ea68ed31be09" name="JsonPath RegEx Match">
               <con:configuration>
@@ -160,4 +166,5 @@ assert act_last_name==exp_last_name</scriptText>
   </con:reporting>
   <con:authRepository/>
   <con:tags/>
-<con:sensitiveInformation/></con:soapui-project>
+  <con:sensitiveInformation/>
+</con:soapui-project>

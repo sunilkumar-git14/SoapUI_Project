@@ -1,2 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="31d8501c-524e-4991-a07b-9dfbc99d4789" activeEnvironment="Default" name="REST Project 3" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="ffafab5b-5a3a-46b2-b760-3b8a829376c9" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://restcountries.com</con:endpoint></con:endpoints><con:resource name="All" path="/v3.1/all" id="29e33477-98ec-4cb6-be91-7e0e3c86dde3"><con:settings/><con:parameters/><con:method name="All 1" id="d8f988ed-0246-4d8b-8509-5b0c9411daea" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="cacaca14-996c-4e77-b08e-31c6af7edc2b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://restcountries.com</con:endpoint><con:request/><con:originalUri>https://restcountries.com/v3.1/all</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="e6b1f241-eb48-4798-af51-5eba7c198fdf" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://restcountries.com</con:endpoint></con:endpoints><con:resource name="United" path="/v3.1/name/united" id="e5281384-1adc-4104-8d8a-ba2dfb84728e"><con:settings/><con:parameters/><con:method name="United 1" id="71aca80d-0c52-4d31-8323-2fe39874c909" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="513394ba-ef77-4206-8699-4246a54b5598" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://restcountries.com</con:endpoint><con:request/><con:originalUri>https://restcountries.com/v3.1/name/united</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="9f40c96d-ad3b-47c1-8a8d-635b98fa8033" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://restcountries.com</con:endpoint></con:endpoints><con:resource name="Name" path="/v3.1/name/{country_name}" id="a137acff-f223-4079-9ecb-cdaf0f4f814b"><con:settings/><con:parameters><con:parameter><con:name>country_name</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Name 1" id="2a9f2606-3d16-44a7-9c0a-428e45f0fb0a" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="87fc4ac3-18ee-4995-b0d3-7784f466cce6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://restcountries.com</con:endpoint><con:request/><con:originalUri>https://restcountries.com/v3.1/name/nameIndia</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="country_name" value="India" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>country_name</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="f4fab018-9aa9-43e3-8dec-b713e9c7eb84" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://restcountries.com</con:endpoint></con:endpoints><con:resource name="Aruba" path="/v3.1/name/aruba" id="3ba19e8e-781e-4325-9927-b201f5318cd7"><con:settings/><con:parameters><con:parameter><con:name>fullText</con:name><con:value>true</con:value><con:style>QUERY</con:style><con:default>true</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Aruba 1" id="6028c743-4950-4cd1-81a8-2215e5a28ebe" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="0ed4f581-02f5-4ff9-bd50-5709cdaa92a9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://restcountries.com</con:endpoint><con:request/><con:originalUri>https://restcountries.com/v3.1/name/aruba</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="fullText" value="false" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>fullText</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="72abc78f-f1e5-4b25-a45e-d6db0bfd6504" name="Get_Countries TestSuite"><con:description>TestSuite generated for REST Service [https://restcountries.com]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="9cb0d848-c2b7-4c98-bc8d-2c9bf901a84d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="All TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [All] located at [/v3.1/all]</con:description><con:settings/><con:testStep type="restrequest" name="Get_All_Countries" id="ba580e2d-9371-4eae-975f-3617a76b977b"><con:settings/><con:config service="https://restcountries.com" resourcePath="/v3.1/all" methodName="All 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="cacaca14-996c-4e77-b08e-31c6af7edc2b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://restcountries.com</con:endpoint><con:request/><con:originalUri>https://restcountries.com/v3.1/all</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetCountriesByName" id="f06a3312-3ea7-4e8e-a6c0-26c5c67e7b71"><con:settings/><con:config service="https://restcountries.com" resourcePath="/v3.1/name/united" methodName="United 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="United 1 - Request 1" id="513394ba-ef77-4206-8699-4246a54b5598" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://restcountries.com</con:endpoint><con:request/><con:originalUri>https://restcountries.com/v3.1/name/united</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="605330d5-2745-4576-b5d8-f69281d8de3f" name="Request_Parameter TestSuite"><con:description>TestSuite generated for REST Service [https://restcountries.com]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="25d0967c-dfe2-4908-84ac-2dffbd20adc1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Name TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [Name] located at [/v3.1/name/{country_name}]</con:description><con:settings/><con:testStep type="restrequest" name="Request 1" id="ab312e8c-5b4b-4228-b6a3-654ba00f3d70"><con:settings/><con:config service="https://restcountries.com" resourcePath="/v3.1/name/{country_name}" methodName="Name 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request 1" id="87fc4ac3-18ee-4995-b0d3-7784f466cce6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://restcountries.com</con:endpoint><con:request/><con:originalUri>https://restcountries.com/v3.1/name/nameIndia</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="country_name" value="India" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>country_name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+<con:soapui-project id="31d8501c-524e-4991-a07b-9dfbc99d4789" activeEnvironment="Default environment" name="REST Project 3" soapui-version="5.6.0" encryptionMode="Not encrypted" updated="3.10.1 2021-10-13T15:50:30Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="ffafab5b-5a3a-46b2-b760-3b8a829376c9" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://restcountries.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="All" path="/v3.1/all" id="29e33477-98ec-4cb6-be91-7e0e3c86dde3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="All 1" id="d8f988ed-0246-4d8b-8509-5b0c9411daea" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="cacaca14-996c-4e77-b08e-31c6af7edc2b" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://restcountries.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://restcountries.com/v3.1/all</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="e6b1f241-eb48-4798-af51-5eba7c198fdf" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://restcountries.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="United" path="/v3.1/name/united" id="e5281384-1adc-4104-8d8a-ba2dfb84728e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="United 1" id="71aca80d-0c52-4d31-8323-2fe39874c909" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="513394ba-ef77-4206-8699-4246a54b5598" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://restcountries.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://restcountries.com/v3.1/name/united</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="9f40c96d-ad3b-47c1-8a8d-635b98fa8033" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://restcountries.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Name" path="/v3.1/name/{country_name}" id="a137acff-f223-4079-9ecb-cdaf0f4f814b">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>country_name</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Name 1" id="2a9f2606-3d16-44a7-9c0a-428e45f0fb0a" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="87fc4ac3-18ee-4995-b0d3-7784f466cce6" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://restcountries.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://restcountries.com/v3.1/name/nameIndia</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="country_name" value="India" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>country_name</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="f4fab018-9aa9-43e3-8dec-b713e9c7eb84" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://restcountries.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://restcountries.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Aruba" path="/v3.1/name/aruba" id="3ba19e8e-781e-4325-9927-b201f5318cd7">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>fullText</con:name>
+          <con:value>true</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>true</con:default>
+          <con:path xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Aruba 1" id="6028c743-4950-4cd1-81a8-2215e5a28ebe" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="0ed4f581-02f5-4ff9-bd50-5709cdaa92a9" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://restcountries.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://restcountries.com/v3.1/name/aruba</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="fullText" value="false" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>fullText</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="72abc78f-f1e5-4b25-a45e-d6db0bfd6504" name="Get_Countries TestSuite">
+    <con:description>TestSuite generated for REST Service [https://restcountries.com]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="9cb0d848-c2b7-4c98-bc8d-2c9bf901a84d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="All TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [All] located at [/v3.1/all]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Get_All_Countries" id="ba580e2d-9371-4eae-975f-3617a76b977b">
+        <con:settings/>
+        <con:config service="https://restcountries.com" resourcePath="/v3.1/all" methodName="All 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get_All_Countries" id="cacaca14-996c-4e77-b08e-31c6af7edc2b" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://restcountries.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://restcountries.com/v3.1/all</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GetCountriesByName" id="f06a3312-3ea7-4e8e-a6c0-26c5c67e7b71">
+        <con:settings/>
+        <con:config service="https://restcountries.com" resourcePath="/v3.1/name/united" methodName="United 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GetCountriesByName" id="513394ba-ef77-4206-8699-4246a54b5598" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://restcountries.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://restcountries.com/v3.1/name/united</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="605330d5-2745-4576-b5d8-f69281d8de3f" name="Request_Parameter TestSuite">
+    <con:description>TestSuite generated for REST Service [https://restcountries.com]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="25d0967c-dfe2-4908-84ac-2dffbd20adc1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Name TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [Name] located at [/v3.1/name/{country_name}]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="ab312e8c-5b4b-4228-b6a3-654ba00f3d70">
+        <con:settings/>
+        <con:config service="https://restcountries.com" resourcePath="/v3.1/name/{country_name}" methodName="Name 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="87fc4ac3-18ee-4995-b0d3-7784f466cce6" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://restcountries.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://restcountries.com/v3.1/name/nameIndia</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="country_name" value="India" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>country_name</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

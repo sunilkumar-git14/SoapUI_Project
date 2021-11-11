@@ -1,0 +1,19 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <m:StadiumNamesResponse xmlns:m="https://footballpool.dataaccess.eu">
+         <m:StadiumNamesResult>
+            <m:string>Allianz Arena</m:string>
+            <m:string>Arena Națională</m:string>
+            <m:string>Baku Olympic Stadium</m:string>
+            <m:string>Estadio de La Cartuja</m:string>
+            <m:string>Hampden Park</m:string>
+            <m:string>Johan Cruijff Arena</m:string>
+            <m:string>Krestovsky Stadium</m:string>
+            <m:string>Parken Stadium</m:string>
+            <m:string>Puskás Aréna</m:string>
+            <m:string>Stadio Olimpico</m:string>
+            <m:string>Wembley Stadium</m:string>
+         </m:StadiumNamesResult>
+      </m:StadiumNamesResponse>
+   </soap:Body>
+</soap:Envelope>

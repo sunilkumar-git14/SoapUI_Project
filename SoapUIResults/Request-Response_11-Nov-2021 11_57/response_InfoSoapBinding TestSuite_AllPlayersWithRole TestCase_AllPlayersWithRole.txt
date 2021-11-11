@@ -1,0 +1,103 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <m:AllPlayersWithRoleResponse xmlns:m="https://footballpool.dataaccess.eu">
+         <m:AllPlayersWithRoleResult>
+            <m:tTeamPlayerName>
+               <m:iID>2502</m:iID>
+               <m:sName>Marcos Acuña</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1040</m:iID>
+               <m:sName>Marcos Rojo</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1066</m:iID>
+               <m:sName>Emiliano Insúa</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1067</m:iID>
+               <m:sName>Emanuel Mammana</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1068</m:iID>
+               <m:sName>Germán Pezzella</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1070</m:iID>
+               <m:sName>Milton Casco</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1071</m:iID>
+               <m:sName>Nicolás Pareja</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1072</m:iID>
+               <m:sName>Javier Pinola</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1073</m:iID>
+               <m:sName>Jonatan Maidana</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1074</m:iID>
+               <m:sName>José Luis Gómez</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1075</m:iID>
+               <m:sName>Eduardo Salvio</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1041</m:iID>
+               <m:sName>Nicolás Otamendi</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1042</m:iID>
+               <m:sName>Gabriel Mercado</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1043</m:iID>
+               <m:sName>Ramiro Funes Mori</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1044</m:iID>
+               <m:sName>Federico Fazio</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1045</m:iID>
+               <m:sName>Nicolás Tagliafico</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1046</m:iID>
+               <m:sName>Fabricio Bustos</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1047</m:iID>
+               <m:sName>Javier Mascherano</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+            <m:tTeamPlayerName>
+               <m:iID>1069</m:iID>
+               <m:sName>Cristian Ansaldi</m:sName>
+               <m:sTeamName>Argentina</m:sTeamName>
+            </m:tTeamPlayerName>
+         </m:AllPlayersWithRoleResult>
+      </m:AllPlayersWithRoleResponse>
+   </soap:Body>
+</soap:Envelope>

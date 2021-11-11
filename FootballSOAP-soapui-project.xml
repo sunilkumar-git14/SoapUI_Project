@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="01542990-945e-44b1-8b69-9e094c384fe4" activeEnvironment="Default" name="FootballSOAP" resourceRoot="" soapui-version="5.6.0" encryptionMode="Not encrypted" updated="3.9.1 2021-07-21T11:56:24Z" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="01542990-945e-44b1-8b69-9e094c384fe4" activeEnvironment="Default environment" name="FootballSOAP" resourceRoot="" soapui-version="5.6.0" encryptionMode="Not encrypted" updated="3.10.1 2021-10-13T15:50:30Z" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:WsdlInterface" id="112905c4-f38c-45b0-9bdc-b067aa5bbabc" wsaVersion="NONE" name="InfoSoapBinding" type="wsdl" bindingName="{https://footballpool.dataaccess.eu}InfoSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://ws.footballpool.dataaccess.eu/info.wso?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -2628,7 +2628,11 @@
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
             <con:assertion type="Simple NotContains" id="ceb56bd8-65ca-4bf6-98f2-db7c053e7420" name="Not Contains">
-              <con:configuration><token>XYZ</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration>
+              <con:configuration>
+                <token>XYZ</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
             </con:assertion>
             <con:assertion type="XPath Match" id="c5a11e2b-677b-4b51-ab15-5f9f2dec6577" name="XPath Match">
               <con:configuration>
@@ -5103,11 +5107,15 @@ return &lt;m:tPlayerName> {data($x/m:sName)}&lt;/m:tPlayerName>
               </con:configuration>
             </con:assertion>
             <con:assertion type="Invalid HTTP Status Codes" id="b05281e1-59ee-4d34-885b-aa41edfe7ef8" name="Invalid HTTP Status Codes">
-              <con:configuration><codes>301,401,501</codes></con:configuration>
+              <con:configuration>
+                <codes>301,401,501</codes>
+              </con:configuration>
             </con:assertion>
             <con:assertion type="Valid HTTP Status Codes" id="6400fd51-b054-4ed0-97db-b5fa86ac86fa" name="Valid HTTP Status Codes">
               <con:settings/>
-              <con:configuration><codes>200</codes></con:configuration>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
             </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -5120,6 +5128,9 @@ return &lt;m:tPlayerName> {data($x/m:sName)}&lt;/m:tPlayerName>
           </con:request>
         </con:config>
       </con:testStep>
+      <con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript>
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
@@ -5145,7 +5156,11 @@ return &lt;m:tPlayerName> {data($x/m:sName)}&lt;/m:tPlayerName>
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
             <con:assertion type="Simple Contains" id="01eeb9eb-ac10-4b93-8643-38ce6074d2cc" name="Contains">
-              <con:configuration><token>British Indian Ocean Territory</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration>
+              <con:configuration>
+                <token>British Indian Ocean Territory</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
             </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -5158,6 +5173,9 @@ return &lt;m:tPlayerName> {data($x/m:sName)}&lt;/m:tPlayerName>
           </con:request>
         </con:config>
       </con:testStep>
+      <con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript>
       <con:properties/>
       <con:reportParameters/>
     </con:testCase>
@@ -5227,6 +5245,9 @@ log.info context.expand('${#TestCase#msg}')
 log.info context.expand('${Properties#msg}')</script>
         </con:config>
       </con:testStep>
+      <con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript>
       <con:properties>
         <con:property>
           <con:name>msg</con:name>
@@ -5254,7 +5275,7 @@ log.info context.expand('${Properties#msg}')</script>
   <con:testSuite id="cc42c0bf-3dcb-4d43-a7a3-b43a1c5bf171" name="StadiumName_and_info TestSuite">
     <con:settings/>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="ca358a33-dff4-4cd1-b9ab-56a218ade1d1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="InfoSoapBinding TestSuite" searchProperties="true">
+    <con:testCase id="ca358a33-dff4-4cd1-b9ab-56a218ade1d1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="InfoSoapBinding Testcase" searchProperties="true">
       <con:settings/>
       <con:testStep type="request" id="51a391a4-2215-4a61-92ba-ea14f4a4d5ae" name="StadiumNames">
         <con:settings/>
@@ -5327,6 +5348,151 @@ log.info context.expand('${Properties#msg}')</script>
             <con:wsaConfig action="https://footballpool.dataaccess.eu/InfoSoapType/StadiumInfoRequest" mustUnderstand="NONE" version="200508"/>
             <con:wsrmConfig version="1.2"/>
           </con:request>
+        </con:config>
+      </con:testStep>
+      <con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="b1b8977c-0139-482c-9616-ae976dc83983" name="Library" disabled="true">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="359532ff-50f9-43d7-a834-e51929b001b3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Reporting_Utility" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="groovy" name="GenerateCSVReport" id="46620cd9-22cd-483d-afb9-1a34e17e437b">
+        <con:settings/>
+        <con:config>
+          <script>// Try-catch block to handle exceptions
+try {
+
+// 1. Create a "SoapUIResults" folder in the project path 
+      // Retrieve the project root folder
+      def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath
+
+      // Specify a folder inside project root to store the results
+      String folderPath = projectPath + "/SoapUIResults";
+
+      // Create a File object for the specified path
+      def resultFolder = new File(folderPath);
+
+      // Check for existence of folder and create a folder
+      if(!resultFolder.exists())
+      {
+        resultFolder.mkdirs();
+      }
+
+/* ------------------------------------------------------------------------------- */
+
+// 2. Create a subfolder (with timestamp) to store the request-response local copy 
+      // Retrieve the latest execution date-time
+      Date d = new Date();
+      def executionDate = d.format("dd-MMM-yyyy HH_mm");
+
+      // Specify the subfolder path with name Request-Response_CurrentTimeStamp
+      String subfolderPath1 = folderPath+ "/Request-Response_"+executionDate;
+
+      // Create this sub-folder
+      new File(subfolderPath1).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 3. Create another subfolder "CSV Reports" to store the reports file 
+      // Specify the subfolder path with name CSV Reports
+      String subfolderPath2 = folderPath+ "/CSV Reports";
+
+      // Create this sub-folder
+      new File(subfolderPath2).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 4. Create a Report.csv file inside the CSV Reports folder 
+      // Create a File object for Report csv file (with timestamp)
+      def reportFile = new File(subfolderPath2, "Report_"+executionDate+".csv");
+
+      // Check for existence of report file and create a file
+      if(!reportFile.exists())
+      {
+        reportFile.createNewFile();
+        // Create required column names in the report file
+        reportFile.write('"Test Suite","Test Case","Test Step","Step Type","Step Status",'
+                        +'"Result message","Execution Date"');
+      }
+/* ------------------------------------------------------------------------------- */
+// 5. Inserting data in the file
+      // Iterate over all the test steps results
+  for(stepResult in testRunner.getResults())
+  {
+    // Retrieve Test Suite name
+   def testSuite = testRunner.testCase.testSuite.name;
+   // Retrieve Test Case name
+   def testCase = testRunner.testCase.name;
+   // Retrieve Test Step
+   def testStep = stepResult.getTestStep();
+   // Retrieve Test Step name
+   def testStepName = testStep.name
+   // Retrieve Test Step type
+   def type = testStep.config.type
+   // Retrieve Test Step status
+   def status = stepResult.getStatus()
+
+   // Creating new line in report file
+   reportFile.append('\n');
+
+   // Write all the necessary information in the file
+   reportFile.append('"' + testSuite + '",');
+   reportFile.append('"' + testCase + '",');
+   reportFile.append('"' + testStepName + '",');
+   reportFile.append('"' + type + '",');
+   reportFile.append('"' + status + '",');
+
+   // Retrieve the test result messages
+   reportFile.append('"');
+   for(resMessage in stepResult.getMessages())
+   {
+     // Write messages and separate multiple messages by new line
+     reportFile.append('Message:' + resMessage + '\n');
+   }
+   reportFile.append('",');
+
+   //Write executionDate in the file
+   reportFile.append('"' + executionDate + '",');
+/* ------------------------------------------------------------------------------- */
+// 6. Extract the request and response and save it to external file
+      // Verify if the test step type is request: SOAP project or restrequest: REST project
+        if((type=="request").or(type=="restrequest"))
+        {
+          // Extract the request from the test step
+          def extRequest = testStep.properties["Request"].value;    
+
+      // Create a file in the reports folder and write the request
+      // Naming convention: request_TestSuiteName_TestCaseName_TestStepName.txt
+      def requestFile=subfolderPath1+"/request_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rqfile = new File(requestFile);
+      rqfile.write(extRequest, "UTF-8");
+
+      // Extract the response from the test step
+      def extResponse = stepResult.getResponseContent();    
+
+      // Create a file in the reports folder and write the response
+      // Naming convention: response_TestSuiteName_TestCaseName_TestStepName.txt
+      def responseFile=subfolderPath1+"/response_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rsfile = new File(responseFile);
+      rsfile.write(extResponse, "UTF-8");
+     }
+   }
+ }
+catch(exc)
+{
+   log.error("Exception happened: " + exc.toString());
+}</script>
         </con:config>
       </con:testStep>
       <con:properties/>

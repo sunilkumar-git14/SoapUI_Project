@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:foot="https://footballpool.dataaccess.eu">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <foot:StadiumInfo>
+         <foot:sStadiumName>Estadio de La Cartuja</foot:sStadiumName>
+      </foot:StadiumInfo>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7b910c90-c329-4df5-95be-b083753ce82b" created="3.9.1" activeEnvironment="Default" name="Soap_Project" resourceRoot="" updated="3.9.1 2021-07-21T11:56:24Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="7b910c90-c329-4df5-95be-b083753ce82b" created="3.9.1" activeEnvironment="Default environment" name="Soap_Project" resourceRoot="" updated="3.10.1 2021-10-13T15:50:30Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:WsdlInterface" id="bc2d53c5-eb98-4598-bf4a-bf5700c7988d" wsaVersion="NONE" name="InfoSoapBinding" type="wsdl" bindingName="{https://footballpool.dataaccess.eu}InfoSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://ws.footballpool.dataaccess.eu/info.wso?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -2568,7 +2568,14 @@
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
     <con:testCase id="63b3aa14-f90f-46d1-8a5e-e853720a26f5" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Countries Test Case" searchProperties="true" timeout="0" maxResults="0">
-      <con:settings/>
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+        <con:setting id="GeneratableAllureReport@Folder">C:\Users\sunil\Desktop\reports</con:setting>
+      </con:settings>
       <con:savedRecentRuns>1</con:savedRecentRuns>
       <con:testStep type="datasource" name="Data Source Excel file" id="753358d8-0a96-4b0a-9aff-fe787b6c8790">
         <con:settings/>
@@ -2623,7 +2630,8 @@
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:jmsPropertyConfig/><con:wsaConfig action="https://footballpool.dataaccess.eu/InfoSoapType/CountriesRequest" mustUnderstand="NONE" version="200508"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig action="https://footballpool.dataaccess.eu/InfoSoapType/CountriesRequest" mustUnderstand="NONE" version="200508"/>
             <con:wsrmConfig version="1.2"/>
           </con:request>
         </con:config>
@@ -2707,7 +2715,8 @@
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:jmsPropertyConfig/><con:wsaConfig action="https://footballpool.dataaccess.eu/InfoSoapType/CountriesRequest" mustUnderstand="NONE" version="200508"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig action="https://footballpool.dataaccess.eu/InfoSoapType/CountriesRequest" mustUnderstand="NONE" version="200508"/>
             <con:wsrmConfig version="1.2"/>
           </con:request>
         </con:config>
@@ -2788,12 +2797,23 @@
                 <ignoreComments>false</ignoreComments>
               </con:configuration>
             </con:assertion>
+            <con:assertion type="XPath Match" id="2e9c13ca-d0d2-49c9-bf63-0583b4b85c84" name="Match content of [m:sISOCode]">
+              <con:configuration>
+                <path>declare namespace m='https://footballpool.dataaccess.eu';
+//m:CountriesResponse[1]/m:CountriesResult[1]/m:tCountry[1]/m:sISOCode[1]/text()</path>
+                <content>${Data Source Grid#isocode}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:jmsPropertyConfig/><con:wsaConfig action="https://footballpool.dataaccess.eu/InfoSoapType/CountriesRequest" mustUnderstand="NONE" version="200508"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig action="https://footballpool.dataaccess.eu/InfoSoapType/CountriesRequest" mustUnderstand="NONE" version="200508"/>
             <con:wsrmConfig version="1.2"/>
           </con:request>
         </con:config>
@@ -2916,10 +2936,11 @@
           <con:dataSource type="JDBC">
             <con:configuration>
               <driver>com.mysql.jdbc.Driver</driver>
-              <connstr>jdbc:mysql://localhost:3306/DemoDataBase?user=root&amp;password=PASS_VALUE</connstr>
+              <connstr>jdbc:mysql://localhost:3306/demodatabase?user=root&amp;password=PASS_VALUE</connstr>
               <pass>root</pass>
-              <Connection>&lt;None></Connection>
-              <query>select country,isocode from country</query>
+              <Connection/>
+              <query>Select country.country, country.isocode
+From country</query>
               <fetchSize/>
               <stored-procedure>false</stored-procedure>
             </con:configuration>
@@ -2928,6 +2949,7 @@
           <con:restartShared>true</con:restartShared>
           <con:property>country</con:property>
           <con:property>isocode</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
           <con:restartOnRun>true</con:restartOnRun>
         </con:config>
       </con:testStep>
@@ -3036,4 +3058,5 @@
   </con:eventHandlers>
   <con:authRepository/>
   <con:tags/>
+  <con:sensitiveInformation/>
 </con:soapui-project>

@@ -1,0 +1,10 @@
+"Test Suite","Test Case","Test Step","Step Type","Step Status","Result message","Execution Date"
+"FootballTestSuite","AllPlayerNames TestCase","AllPlayerNames","request","OK","","11-Nov-2021 11_57",
+"FootballTestSuite","Countries TestCase","Countries","request","OK","","11-Nov-2021 11_57",
+"InfoSoapBinding TestSuite","AllPlayersWithRole TestCase","AllPlayersWithRole","request","UNKNOWN","","11-Nov-2021 11_57",
+"InfoSoapBinding TestSuite","AllPlayersWithRole TestCase","Properties","properties","OK","","11-Nov-2021 11_57",
+"InfoSoapBinding TestSuite","AllPlayersWithRole TestCase","Groovy Script","groovy","OK","","11-Nov-2021 11_57",
+"StadiumName_and_info TestSuite","InfoSoapBinding Testcase","StadiumNames","request","UNKNOWN","","11-Nov-2021 11_57",
+"StadiumName_and_info TestSuite","InfoSoapBinding Testcase","Property Transfer","transfer","OK","Message:Performed transfer [pt]
+","11-Nov-2021 11_57",
+"StadiumName_and_info TestSuite","InfoSoapBinding Testcase","StadiumInfo","request","UNKNOWN","","11-Nov-2021 11_57",

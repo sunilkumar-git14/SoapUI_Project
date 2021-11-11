@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:foot="https://footballpool.dataaccess.eu">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <foot:AllPlayerNames>
+         <foot:bSelected>?</foot:bSelected>
+      </foot:AllPlayerNames>
+   </soapenv:Body>
+</soapenv:Envelope>

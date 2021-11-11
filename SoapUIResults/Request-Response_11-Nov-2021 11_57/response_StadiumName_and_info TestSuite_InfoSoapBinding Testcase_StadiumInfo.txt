@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <m:StadiumInfoResponse xmlns:m="https://footballpool.dataaccess.eu">
+         <m:StadiumInfoResult>
+            <m:sName>Estadio de La Cartuja</m:sName>
+            <m:iSeatsCapacity>60000</m:iSeatsCapacity>
+            <m:sCityName>Seville</m:sCityName>
+            <m:sWikipediaURL>https://en.wikipedia.org/wiki/Estadio_de_La_Cartuja</m:sWikipediaURL>
+            <m:sGoogleMapsURL>https://www.google.com/maps/place/Estadio+La+Cartuja+de+Sevilla/@37.4171749,-6.006821,17z/data=!3m1!4b1!4m5!3m4!1s0xd126b936aa99ef3:0xe0a59b52052890c8!8m2!3d37.4171707!4d-6.0046323</m:sGoogleMapsURL>
+         </m:StadiumInfoResult>
+      </m:StadiumInfoResponse>
+   </soap:Body>
+</soap:Envelope>

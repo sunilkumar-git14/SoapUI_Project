@@ -1,0 +1,18 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <m:CountriesResponse xmlns:m="https://footballpool.dataaccess.eu">
+         <m:CountriesResult>
+            <m:tCountry>
+               <m:iId>73</m:iId>
+               <m:sName>India</m:sName>
+               <m:sISOCode>IN</m:sISOCode>
+            </m:tCountry>
+            <m:tCountry>
+               <m:iId>203</m:iId>
+               <m:sName>British Indian Ocean Territory</m:sName>
+               <m:sISOCode>IO</m:sISOCode>
+            </m:tCountry>
+         </m:CountriesResult>
+      </m:CountriesResponse>
+   </soap:Body>
+</soap:Envelope>
